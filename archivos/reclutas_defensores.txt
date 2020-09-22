@@ -1,0 +1,5 @@
+FBI Swat;Subfusil UMP45,Escopeta M1014;Pistola M45 MEUSOC,Pistola 5.7 USG;Alambre de Espino;Mina,Escudo Desplegable
+GIGN;Subfusil P90,Escopeta SG-CQB,Subfusil MP5;Pistola P9,Revolver LFP586;Alambre de Espino;Mina,Escudo Desplegable
+GSG 9;Subfusil Mp7,Escopeta M870,Subfusil 416-C Carbine;Pistola P12;Alambre de Espino;Mina,Escudo Desplegable
+SAS;Subfusil Mp5K,Escopeta M590A1;Subfusil FMG-9;Pistola P226 MK 25,Subfusil SMG-11;Alambre de Espino;Mina,Escudo Desplegable
+SPETSTAZ;Subfusil 9x19vsn,Escopeta SASG-12;Pistola PMM,GSH-18;Alambre de Espino;Mina,Escudo Desplegable

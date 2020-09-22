@@ -1,0 +1,18 @@
+Sledge;Escopeta M590A1,Fusil de asalto L85A2;Pistola P226 MK 25,Subfusil SMG-11;Granada Frag,Granada Aturdidora
+Tatcher;Fusil de asalto AR33,Fusil de asalto L85A2,Escopeta M590A1;Pistola P226 MK 25;Carga de Demolicion,Claymore
+Ash;Fusil de asalto G36C,Fusil de salto R4-C;Pistola M45 MEUSOC,Pistola 5.7 USG;Carga de demolicion,Granada aturdidora
+Thermite;Escopeta M1014,Fusil 556XI;Pistola M45-MEUSOC,Pistola 5.7 USG;Claymore,Granada aturdirora
+Twitch;Fusil F2,Rifle 417,Escopeta SG-CQB;Pistola P9,Revolver LFP586;Claymore,Carga demoledora
+Montagne;Escudo Desplegable;Pistola P9,Revolver LFP586;Granada Aturdidora,Bote de Humo
+Glaz;Rifle OTs-03;Pistola GSH-18,Pistola PMM;Bote de Humo,Claymore
+Fuze;Escudo Antibalas,Ametralladora 6P41,Fusil AK-12;Pistola PMM,Pistola GSH-18;Carga demoledora,Bote de humo
+Blitz;Escudo Cegador;Pistola P12;Bote de Humo,Carga demoledora
+IQ;Fusil AUG A2,Fusil 552 Commando,Ametralladora G8A1;Pistola P12;Carga demoledora,Granada Frag
+Buck;Fusil C8-SFW,Fusil Semiautomatico CAMRS;Pistola MK1 9mm;Granada Frag, Granada Aturdidora
+Blackbeard;Fusil MK17 CQB,Rifle SR-25;Pistola D-50;Carga demoledora,Granada aturdidora
+Capitao;Fusil PARA-308,Ametralladora M249;Pistola PRB92;Claymore,Granada Aturdidora
+Hibana;Fusil TYPE-89,Escopeta Supernova;Pistola P229,Subfusil BEARING 9;Granada Aturdidora,Claymore
+Jackal;Fusil C7E,Subfusil PDW9,Escopeta ITA12L;Pistola UPS40,Escopeta Ita12s;Carga demoledora,Bote de humo
+Ying;Ametralladora T-95 LSW,Escopeta SIX12;Pistola Q-929;Carga demoledora,Bote de humo
+Zofia;Ametralladora LMG-E,Fusil M762;Pistola RG15;Carga demoledora, Claymore
+Dokkaebi;Fusil Mk 14 EBR,Escopeta Bosg.12.2;Pistola C75 Auto,Subfusil SMG-12;Bote de humo,Claymore

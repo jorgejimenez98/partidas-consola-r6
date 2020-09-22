@@ -1,0 +1,18 @@
+Smoke;Subfisil FMG-9,Escopeta M590A1;Pistola P226 MK 25,Subfusil SMG-11;Alambre de espino,Granada de impacto
+Mute;Subfusil MP5K,Escopeta M590A1;Pistola P226 Mk 25;Mina,Escudo desplegable
+Castle;Subfusil UMP45,Escopeta M1014;Pistola 5.7 USG,Pistola MEUSOC;Escudo Desplegable,Granada de Impacto
+Pulse;Escopeta M1014,Subfusil UMP25;Pistola 5.7 USG,Pistola MEUSOC;Alambre de espino,Mina
+Doc;Escopeta SG-CQB,Subfusil MP5,Subfusil P90;Pistola P9,Revolver LFP586;Escudo desplegable, Alambre de espino
+Rook;Escopeta SG-CQB,Subfusil MP5,Subfusil P90;Pistola P9,Revolver LFP586;Granada de Impacto,Alambre de Espino
+Kapkan;Subfusil 9x19VSN,Escopeta SASG-12;Pistola PMM,Pistola GSH-18;Alambre de espino,Mina
+Tachanka;Subfusil 9x19VSN,Escopeta SASG-12;Pistola PMM,Pistola GSH-18;Alambre de espino,Escudo Desplegable
+Jagger;Escopeta M870,Subfusil 416-C Carbine;Pistola P12;Escudo Despleglable,Alambre de espino
+Bandit;Subfusil MP7,Escopeta M870;Pistola P12;Alambre de espino,Mina
+Frost;Escopeta Super 90,Subfusil 9mm Cl;Pistola Mk1 9mm;Escudo Despleglable,Alambre de espino
+Valkyria;Subfusil MPX,Escopeta SPAS-12;Pistola D-50;Escudo Despleglable,Mina
+Caveira;Subfusil M12,Escopeta SPAS-15;Luison;Alambre de Espino,Alambre de espino
+Echo;Escopeta SUPERNOVA,Subfusil MP5SD;Pistola P229,Subfusil BEARING 9;Escudo Despleglable,Alambre de espino
+Mira;Subfusil VECTOR .45 ACP,Escopeta ITA12L;Pistola UPS40,Escopeta ITA12S;Escudo Despleglable,Mina
+Lesion;Escopeta SIX12 SD,Subfusil T-5 SMG;Pistola Q-929;Escudo Despleglable,Granada de Impacto
+Ela;Subfusil SCORPION EVO 3 A1,Escopeta F0-12;Pistola RG15;Granada de impacto,Alambre de espino
+Vigil;Subfusil K1A,Escopeta BOSG.12.2;Pistola Ametralladora C75 Auto,Pistola Ametralladora SMG-12;Alambre de Espino,Granada de impacto

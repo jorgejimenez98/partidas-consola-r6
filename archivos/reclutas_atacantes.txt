@@ -1,0 +1,5 @@
+FBI Swat;Escudo Antibalas,Escopeta M1014,Fusil R4-C,Fusil 556XI;Pistola M45 MEUSOC,Pistola 5.7 USG;Carga demoledora,Bote de Humo;Granada Frag,Granada Aturdidora
+GIGN;Fusil F2,Escopeta SG-CQB,Fusil Semiautomatico 417,Escudo Antibalas;Revolver LFP586,Pistola P9;Carga Demoledora,Bote de Humo;Granada Frag,Granada Aturdidora
+GSG 9;Fusil AUG A2,Escopeta M870,Fusil 552 Commando,G8A1;Pistola P12;Carga Demoledora,Bote de Humo;Granada Frag,Granada Aturdidora
+SAS;Fusil L85A2,Escopeta M590A1,Fusil AR33;Pistola P22Mk 25,Subfusil SMG-11;Carga demoledora,Bote de Humo;Granada Frag,Granada Aturdidora
+SPETSTAZ;Fusil AK-12,Fusil SAG-12,Ametralladora 6P41;Pistola PMM,Pistola GSH-18;Carga Demoledora,Bote de Humo;Granada Frag,Granada Aturdidora
