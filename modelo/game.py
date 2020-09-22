@@ -79,6 +79,32 @@ class Game:
             self.makeOneRoundWith(operator)
 
     def continueMakeOneRoundWithKindOfPlayer(self, isBanned, operator):
+        """
+        METODO QUE REALIZA UNA RONDA CON UN TIPO DE JUGADOR (RECLUTAS O OPERADORES) Y CONTROLA LOS JUGADORES QUE EL
+        USUARIO HA ELEGIDO BANEAR
+        """
+        print("\n*-**-**-* Reclutas disponibles: ")
+        attackerOperatorNames = [e["Nombre"] for e in self.attackerOperators]
+        defenderOperatorNames = [e["Nombre"] for e in self.defenderOperators]
+        if operator == "operadores":
+            attackerOperatorNames = [e["Nombre"] for e in self.attackersPlayers]
+            defenderOperatorNames = [e["Nombre"] for e in self.defenderPlayers]
+        print("\t{} atacantes: {}".format(operator.title(), " *-* ".join(i for i in attackerOperatorNames)))
+        print("\t{} defensores: {}".format(operator.title(), " *-* ".join(i for i in defenderOperatorNames)))
+        if isBanned:
+            string1 = "\nIngrse los nombres de los {} atacantes que desea banear separados por un (;): ".format(operator)
+            string2 = "Ingrse los nombres de los {} defensores que desea banear separados por un (;): ".format(operator)
+            bannedAttackerOperators = input(string1).split(";")
+            bannedDefenderOperators = input(string2).split(";")
+            if len(bannedAttackerOperators) >= len(attackerOperatorNames) or len(bannedDefenderOperators) >= len(defenderOperatorNames):
+                print("\nSolo se deben banear como maximo 4 {} ya sea atacante o defensor".format(operator))
+                self.makeOneRoundWith(operator)
+            else:
+                self.continueRoundWithBannedOperators(bannedAttackerOperators, bannedDefenderOperators, operator, isBanned)
+        else:
+            self.continueRoundWithBannedOperators([], [], operator, isBanned)
+
+    def continueRoundWithBannedOperators(self, attackerBannedOperators, defenderBannedOperators, operator, isBanned):
         pass
 
     def insertPlayerNamesFromConsole(self):
