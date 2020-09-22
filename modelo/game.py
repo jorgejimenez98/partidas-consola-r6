@@ -249,7 +249,13 @@ class Game:
                 operatorsArray[i]["Dispositivo Principal"] = self.getRandomEquipement(recruitsArray[recruitsIndexes[i]]["Dispositivo Principal"])
 
     def getRandomEquipement(self, weaponsArray):
-        pass
+        """
+        METODO QUE DEVUELVE UN ARMAMENTO ALEATORIO DENTRO DE UN ARRAY DE ARMAMENTOS
+        :param weaponsArray: ARRAY CON TODAS LAS ARMAS DISPONIBLES PARA UN CIERTO OPERADOR
+        """
+        if len(weaponsArray) == 1:
+            return weaponsArray[0]
+        return weaponsArray[randint(0, len(weaponsArray) - 1)]
 
     def printRecruits(self, recruitsArray, playersPosition, operator):
         """
