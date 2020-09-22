@@ -194,7 +194,31 @@ class Game:
         return None
 
     def getOperatorArrayWithEmptyValues(self, operatorNamesArray, operator):
-        pass
+        """
+        METODO QUE DEVUELVE UN ARRAY CON TODOS LOS NOMBRES DE LOS JUGADORES PASADOS POR PARAMETRO PERO CADA JUGADOR
+        SE DEVUELVE CON SUS CARACTERISTICAS PERSONALES CON UN VALOR VACIO.
+        """
+        array = []
+        for i in operatorNamesArray:
+            if operator == "reclutas":
+                dicc = {
+                    "Nombre Jugador": i,
+                    "Nombre": "",
+                    "Arma Principal": "",
+                    "Arma Secundaria": "",
+                    "Dispositivo Principal": "",
+                    "Dispositivo Secundario": ""
+                }
+            else:
+                dicc = {
+                    "Nombre Jugador": i,
+                    "Nombre": "",
+                    "Arma Principal": "",
+                    "Arma Secundaria": "",
+                    "Dispositivo Secundario": "",
+                }
+            array.append(dicc)
+        return array
 
     def generateRandomIndexes(self, recruitsArray, length, bannedAttackerPlayers, defenderBannedPlayers, isBanned):
         pass
