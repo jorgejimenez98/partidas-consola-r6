@@ -161,7 +161,28 @@ class Game:
                 print("\nError. Seleccione el ganador de la ronda. (1/2)")
 
     def getOperatorArrayFromTXT(self, url, type):
-        pass
+        """
+        METODO PARA OBTENER UNA LISTA DE OPERADORES DE UN TXT
+        """
+        array = []
+        for i in [e.strip() for e in open(url, 'r').readlines()]:
+            auxArray = i.split(";")
+            if type == "operadores":
+                array.append({
+                    'Nombre': auxArray[0],
+                    "Arma Principal": auxArray[1].split(","),
+                    "Arma Secundaria": auxArray[2].split(","),
+                    "Dispositivo Secundario": auxArray[3].split(",")
+                })
+            else:
+                array.append({
+                    'Nombre': auxArray[0],
+                    "Arma Principal": auxArray[1].split(","),
+                    "Arma Secundaria": auxArray[2].split(","),
+                    "Dispositivo Principal": auxArray[3].split(","),
+                    "Dispositivo Secundario": auxArray[4].split(",")
+                })
+        return array
 
     def getMap(self):
         pass
