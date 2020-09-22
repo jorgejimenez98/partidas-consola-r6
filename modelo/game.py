@@ -25,3 +25,16 @@ class Game:
         self.__map = ""
         """VARIABLE DONDE SE ALMACENA EL NOMBRE DEL TIPO DE PARTIDA SELECCIONADO ALEATORIAMENTE"""
         self.__gameType = ""
+
+        """ANNADIR LOS JUGADORES Y LAS PISTAS AL SISTEMA CARGANDOLOS DE UN TXT"""
+        self.addPlayersFromTXT("ATACANTE", 'archivos/operadores_atacantes.txt')
+        self.addPlayersFromTXT("DEFENSOR", 'archivos/operadores_defensores.txt')
+        self.addPlayersFromTXT("RECLUTA_DEFENSOR", 'archivos/reclutas_defensores.txt')
+        self.addPlayersFromTXT("RECLUTA_ATACANTE", 'archivos/reclutas_atacantes.txt')
+        self.loadMapsFromTXT()
+
+    def addPlayersFromTXT(self, type, fileUrl):
+        pass
+
+    def loadMapsFromTXT(self):
+        pass
