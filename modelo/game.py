@@ -185,7 +185,13 @@ class Game:
         return array
 
     def getMap(self):
-        pass
+        """
+        METODO PARA DEVOLVER UNA PISTA SEGUN LA PISTA SELECCIONADA PARA LA PARTIDA
+        """
+        for i in self.maps:
+            if i["Nombre"] == self.map:
+                return i
+        return None
 
     def getOperatorArrayWithEmptyValues(self, operatorNamesArray, operator):
         pass
