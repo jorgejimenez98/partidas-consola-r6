@@ -52,13 +52,39 @@ class Game:
         pass
 
     def insertPlayerNamesFromConsole(self):
-        pass
+        """
+        METODO PARA INSERTAR POR CONSOLA LOS NOMBRES DE LOS JUGADORES DEL EQUIPO AZUL Y NARANJA A PARTIR DE LA CANTIDAD
+        DE JUGADORES ESCOGIDAS POR EL USUARIO
+        """
+        print("\n\t\t\tInicio de la partida Rainbow Six Siege")
+        bluePlayersCount = int(input("Entre la cantidad de jugadores del equipo azul: "))
+        orangePlayersCount = int(input("Entre la cantidad de jugadores del equipo naranja: "))
+        print("\n\t\t\tEquipo Azul")
+        for i in range(bluePlayersCount):
+            self.blueTeamPlayerNames.append(input("Entre el nombre del jugador {} del equipo azul: ".format(i + 1)))
+        print("\n\t\t\tEquipo naranja")
+        for i in range(orangePlayersCount):
+            self.orangeTeamPlayerNames.append(
+                input("Entre el nombre del jugador {} del equipo naranja: ".format(i + 1)))
 
     def selectARandomMap(self):
-        pass
+        """
+        METODO PARA SELECCIONAR UNA PISTA ALEATORIA SELECCIONANDOLAS DESDE UN TXT
+        """
+        mapsArray = [i.strip().split(";")[0] for i in open('archivos/pistas.txt', 'r').readlines()]
+        self.map = mapsArray[randint(0, len(mapsArray) - 1)]
+        self.typeOfGame = str("Asegurar Zona;Rehen;Bombas".split(";")[randint(0, 2)])
+        print("\nLa pista aleatoria en la que se va a realizar la partida es: \t\t{} - {}".format(self.map, self.typeOfGame))
+
 
     def printTeamDetails(self, team, names):
-        pass
+        """
+        METODO PARA IMPRIMIR LAS RONDAS GANADAS Y LOS NOBMBRES DE CADA EQUIPO
+        """
+        if team == "AZUL":
+            print("Rondas ganadas por el equipo azul: {} RONDAS\t {} ".format(self.roundsWonByBlueTeam, names))
+        else:
+            print("Rondas ganadas por el equipo naranja: {} RONDAS\t {} ".format(self.roundsWonByOrangeTeam, names))
 
     def addPlayersFromTXT(self, type, fileUrl):
         """
