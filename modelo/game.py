@@ -33,6 +33,33 @@ class Game:
         self.addPlayersFromTXT("RECLUTA_ATACANTE", 'archivos/reclutas_atacantes.txt')
         self.loadMapsFromTXT()
 
+    def makeRounds(self):
+        """REALIZAR TODAS LAS RONDAS DE LA PARTIDA HASTA QUE HALLA UN GANADOR"""
+        self.insertPlayerNamesFromConsole()
+        self.selectARandomMap()
+        while self.roundsWonByBlueTeam != 4 and self.roundsWonByOrangeTeam != 4:
+            self.makeOneRound()
+        blueTeamPlayerNames = " - ".join(i for i in self.blueTeamPlayerNames)
+        OrangeTeamPlayerNames = " - ".join(i for i in self.orangeTeamPlayerNames)
+        self.printTeamDetails("AZUL", blueTeamPlayerNames)
+        self.printTeamDetails("NARANJA", OrangeTeamPlayerNames)
+        winnerTeam = blueTeamPlayerNames
+        if self.roundsWonByOrangeTeam > self.roundsWonByBlueTeam:
+            winnerTeam = OrangeTeamPlayerNames
+        print("\n\tEquipo ganador: {}\tFIN DE LA PARTIDA".format(winnerTeam))
+
+    def makeOneRound(self):
+        pass
+
+    def insertPlayerNamesFromConsole(self):
+        pass
+
+    def selectARandomMap(self):
+        pass
+
+    def printTeamDetails(self, team, names):
+        pass
+
     def addPlayersFromTXT(self, type, fileUrl):
         """
         METODO PARA ANNADIR LOS NOMBRES DE LOS OPERADORES O RECLUTAS A UN ARRAY DESDE UN TXT
