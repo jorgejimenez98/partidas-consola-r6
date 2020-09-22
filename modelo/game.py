@@ -49,6 +49,21 @@ class Game:
         print("\n\tEquipo ganador: {}\tFIN DE LA PARTIDA".format(winnerTeam))
 
     def makeOneRound(self):
+        """METODO PARA REALIZAR UNA SIMPLE RONDA DE LA PARTIDA"""
+        self.rondsCount += 1
+        print("\n{}\n\t\tInicio de la ronda {}".format("-" * 80, self.rondsCount))
+        print("Opciones de ronda:\n1- Jugar con reclutas\n2- Jugar con operadores")
+        option = input("Selecciones una de las opciones anteriores (1/2): ")
+        if option == "1":
+            self.makeOneRoundWith("reclutas")
+        elif option == "2":
+            self.makeOneRoundWith("operadores")
+        else:
+            print("Solo debe seleccionar (1) 0 (2)")
+            self.rondsCount -= 1
+            self.makeOneRound()
+
+    def makeOneRoundWith(self, operator):
         pass
 
     def insertPlayerNamesFromConsole(self):
