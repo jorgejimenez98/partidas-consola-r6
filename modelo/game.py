@@ -221,7 +221,19 @@ class Game:
         return array
 
     def generateRandomIndexes(self, recruitsArray, length, bannedAttackerPlayers, defenderBannedPlayers, isBanned):
-        pass
+        """
+        METODO QUE GENERA LOS INDECES ALEATORIOS PARA LUEGO PODER ESCOGER LOS OPERADORES ALEATORIAMENTE A PARTIR DE
+        ESTOS INDICES
+        """
+        indexesArray = []
+        while len(indexesArray) != length:
+            ind = randint(0, len(recruitsArray) - 1)
+            if isBanned:
+                if (recruitsArray[ind]["Nombre"] not in bannedAttackerPlayers and recruitsArray[ind]["Nombre"] not in defenderBannedPlayers) and ind not in indexesArray:
+                    indexesArray.append(ind)
+            elif ind not in indexesArray:
+                indexesArray.append(ind)
+        return indexesArray
 
     def getFullOperatorsArray(self, operatorsArray, recruitsIndexes, recruitsArray, operator):
         pass
