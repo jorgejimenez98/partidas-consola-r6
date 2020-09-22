@@ -34,10 +34,50 @@ class Game:
         self.loadMapsFromTXT()
 
     def addPlayersFromTXT(self, type, fileUrl):
-        pass
+        """
+        METODO PARA ANNADIR LOS NOMBRES DE LOS OPERADORES O RECLUTAS A UN ARRAY DESDE UN TXT
+        """
+        array = []
+        for i in [e.strip() for e in open(fileUrl, 'r').readlines()]:
+            auxArray = i.split(";")
+            if type == "ATACANTE" or type == "DEFENSOR":
+                array.append({
+                    'Nombre': auxArray[0],
+                    "Arma Principal": auxArray[1].split(","),
+                    "Arma Secundaria": auxArray[2].split(","),
+                    "Dispositivo Secundario": auxArray[3].split(",")
+                })
+            else:
+                array.append({
+                    'Nombre': auxArray[0],
+                    "Arma Principal": auxArray[1].split(","),
+                    "Arma Secundaria": auxArray[2].split(","),
+                    "Dispositivo Principal": auxArray[3].split(","),
+                    "Dispositivo Secundario": auxArray[4].split(",")
+                })
+        if type == "ATACANTE":
+            self.attackersPlayers = array
+        elif type == "DEFENSOR":
+            self.defenderPlayers = array
+        elif type == "RECLUTA_DEFENSOR":
+            self.defenderOperators = array
+        else:
+            self.attackerOperators = array
 
     def loadMapsFromTXT(self):
-        pass
+        """
+            METODO PARA CARGAR TODOS LOS MAPAS DE UN TXT Y ALMACENARLOS EN UN ARRAY
+            """
+        array = []
+        for i in [e.strip() for e in open('archivos/pistas.txt', 'r').readlines()]:
+            auxArray = i.split(";")
+            array.append({
+                "Nombre": auxArray[0],
+                "Asegurar Zona": [auxArray[1].split(","), auxArray[2].split(",")],
+                "Rehen": [auxArray[1].split(","), auxArray[3].split(",")],
+                "Bombas": [auxArray[1].split(","), auxArray[4].split(",")]
+            })
+        self.maps = array
 
     # METODOS GETTER Y SETTERS DE LA CLASE GAME
     @property
