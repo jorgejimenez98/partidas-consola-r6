@@ -38,3 +38,108 @@ class Game:
 
     def loadMapsFromTXT(self):
         pass
+
+    # METODOS GETTER Y SETTERS DE LA CLASE GAME
+    @property
+    def defenderOperators(self):
+        return self.__defenderRecruits
+
+    @defenderOperators.setter
+    def defenderOperators(self, value):
+        self.__defenderRecruits = value
+
+    @property
+    def attackerOperators(self):
+        return self.__attackerRecruits
+
+    @attackerOperators.setter
+    def attackerOperators(self, value):
+        self.__attackerRecruits = value
+
+    @property
+    def defenderPlayers(self):
+        return self.__defenderPlayers
+
+    @defenderPlayers.setter
+    def defenderPlayers(self, value):
+        self.__defenderPlayers = value
+
+    @property
+    def attackersPlayers(self):
+        return self.__attackerPlayers
+
+    @attackersPlayers.setter
+    def attackersPlayers(self, value):
+        self.__attackerPlayers = value
+
+    @property
+    def map(self):
+        return self.__map
+
+    @map.setter
+    def map(self, value):
+        self.__map = value
+
+    @property
+    def orangeTeamPlayerNames(self):
+        return self.__orangeTeam
+
+    @orangeTeamPlayerNames.setter
+    def orangeTeamPlayerNames(self, value):
+        self.__orangeTeam = value
+
+    @property
+    def blueTeamPlayerNames(self):
+        return self.__blueTeam
+
+    @blueTeamPlayerNames.setter
+    def blueTeamPlayerNames(self, value):
+        self.__blueTeam = value
+
+    @property
+    def roundsWonByOrangeTeam(self):
+        return self.__roundsWonByOrangeTeam
+
+    @roundsWonByOrangeTeam.setter
+    def roundsWonByOrangeTeam(self, value):
+        self.__roundsWonByOrangeTeam = value
+
+    @property
+    def roundsWonByBlueTeam(self):
+        return self.__roundsWonByBlueTeam
+
+    @roundsWonByBlueTeam.setter
+    def roundsWonByBlueTeam(self, value):
+        self.__roundsWonByBlueTeam = value
+
+    @property
+    def rondsCount(self):
+        return self.__roundsCount
+
+    @rondsCount.setter
+    def rondsCount(self, value):
+        self.__roundsCount = value
+
+    @property
+    def auxCount(self):
+        return self.__auxCount
+
+    @auxCount.setter
+    def auxCount(self, value):
+        self.__auxCount = value
+
+    @property
+    def maps(self):
+        return self.__maps
+
+    @maps.setter
+    def maps(self, value):
+        self.__maps = value
+
+    @property
+    def typeOfGame(self):
+        return self.__gameType
+
+    @typeOfGame.setter
+    def typeOfGame(self, value):
+        self.__gameType = value
