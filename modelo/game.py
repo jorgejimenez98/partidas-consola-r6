@@ -242,7 +242,10 @@ class Game:
         pass
 
     def printBirthPlace(self, array):
-        pass
+        """
+        METODO PARA IMPRIMIR EL NOMBRE DEL LUGAR DE NACIMIENTO PARA LOS JUGADORES, YA SEA ATACANTE O DEFENSOR
+        """
+        print("\nLugar de nacimiento: {}".format(array[randint(0, len(array) - 1)]))
 
     def insertPlayerNamesFromConsole(self):
         """
