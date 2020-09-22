@@ -238,8 +238,19 @@ class Game:
     def getFullOperatorsArray(self, operatorsArray, recruitsIndexes, recruitsArray, operator):
         pass
 
-    def printRecruits(self, receruitsArray, playersPosition, operator):
-        pass
+    def printRecruits(self, recruitsArray, playersPosition, operator):
+        """
+        METODO PARA IMPRIMIR TODOS LOS OPERADORES O RECLUTAS CON SUS CARACTERISTICAS Y ASIGNADO A UN JUGADOR YA SEA
+        DE UN JUGADOR DEL EQUIPO BLANCO O AZUL
+        """
+        print("\n*--**--**--**--* Jugadores {}".format(playersPosition))
+        for i in recruitsArray:
+            if operator == "reclutas":
+                string = "NJ: {}  -- NR: {} -- AP: {}  -- AS: {}  -- DP: {}  -- DS: {}"
+                print(string.format(i["Nombre Jugador"], i["Nombre"], i["Arma Principal"], i["Arma Secundaria"], i["Dispositivo Principal"], i["Dispositivo Secundario"]))
+            else:
+                string = "NJ: {}  -- NR: {} -- AP: {}  -- AS: {}  -- DS: {}"
+                print(string.format(i["Nombre Jugador"], i["Nombre"], i["Arma Principal"], i["Arma Secundaria"], i["Dispositivo Secundario"]))
 
     def printBirthPlace(self, array):
         """
