@@ -236,6 +236,19 @@ class Game:
         return indexesArray
 
     def getFullOperatorsArray(self, operatorsArray, recruitsIndexes, recruitsArray, operator):
+        """
+        METODO QUE SE ENCARGA DE LLENAR EL ARRAY operatorsArray CON LOS NOMBRES ALEATORIOS DE LOS ATACANTES Y DEFENSORES
+        Y CADA UNO CON UN ARMAMENTO ALEATORIO
+        """
+        for i in range(len(operatorsArray)):
+            operatorsArray[i]["Nombre"] = recruitsArray[recruitsIndexes[i]]["Nombre"]
+            operatorsArray[i]["Arma Principal"] = self.getRandomEquipement(recruitsArray[recruitsIndexes[i]]["Arma Principal"])
+            operatorsArray[i]["Arma Secundaria"] = self.getRandomEquipement(recruitsArray[recruitsIndexes[i]]["Arma Secundaria"])
+            operatorsArray[i]["Dispositivo Secundario"] = self.getRandomEquipement(recruitsArray[recruitsIndexes[i]]["Dispositivo Secundario"])
+            if operator == "reclutas":
+                operatorsArray[i]["Dispositivo Principal"] = self.getRandomEquipement(recruitsArray[recruitsIndexes[i]]["Dispositivo Principal"])
+
+    def getRandomEquipement(self, weaponsArray):
         pass
 
     def printRecruits(self, recruitsArray, playersPosition, operator):
