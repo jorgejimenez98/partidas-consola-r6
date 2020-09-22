@@ -105,6 +105,80 @@ class Game:
             self.continueRoundWithBannedOperators([], [], operator, isBanned)
 
     def continueRoundWithBannedOperators(self, attackerBannedOperators, defenderBannedOperators, operator, isBanned):
+        """
+        METODO PARA CONTINUAR LA RONDA CUANDO EL USUARIO BANEA O NO A LOS OPERADORES DESEADOS
+        :param attackerBannedOperators: NOMBRE DE LOS OPERADORES ATACANTES BANEADOS
+        :param defenderBannedOperators: NOMBRE DE LOS OPERADORES DEFENSORES BANEADOS
+        :param operator: ES EL TIPO DE OPERADOR (RECLUTA O OPERADOR)
+        :param isBanned: BOOLEANO PARA SABER SI EL USUARIO ELIGIO BANEAR JUGADORES O NO
+        :finalmente: IMPRIME LOS RESULTADOS DE LA RONDA MOSTRADON EL EQUIPO GANADOR
+        """
+        position1, position2 = "", ""
+        birthAttackerPlacesArray, birthDefenderPlacesArray = [], []
+        if self.auxCount % 2 == 0:
+            self.attackerOperators = self.getOperatorArrayFromTXT("archivos/{}_atacantes.txt".format(operator), operator)
+            self.defenderOperators = self.getOperatorArrayFromTXT("archivos/{}_defensores.txt".format(operator), operator)
+            self.auxCount += 1
+            birthAttackerPlacesArray = self.getMap()[self.typeOfGame][0]
+            birthDefenderPlacesArray = self.getMap()[self.typeOfGame][1]
+            position1 = "ATACANTES"
+            position2 = "DEFENSORES"
+        elif self.auxCount % 2 != 0:
+            self.attackerOperators = self.getOperatorArrayFromTXT("archivos/{}_defensores.txt".format(operator), operator)
+            self.defenderOperators = self.getOperatorArrayFromTXT("archivos/{}_atacantes.txt".format(operator), operator)
+            birthAttackerPlacesArray = self.getMap()[self.typeOfGame][1]
+            birthDefenderPlacesArray = self.getMap()[self.typeOfGame][0]
+            self.auxCount += 1
+            position1 = "DEFENSORES"
+            position2 = "ATACANTES"
+
+        attackersOperatorsArray = self.getOperatorArrayWithEmptyValues(self.blueTeamPlayerNames, operator)
+        defendersOperatorsArray = self.getOperatorArrayWithEmptyValues(self.orangeTeamPlayerNames, operator)
+        attackerIndexes = self.generateRandomIndexes(self.attackerOperators, len(attackersOperatorsArray), attackerBannedOperators, defenderBannedOperators, isBanned)
+        defenderIndexes = self.generateRandomIndexes(self.defenderOperators, len(defendersOperatorsArray), attackerBannedOperators, defenderBannedOperators, isBanned)
+        self.getFullOperatorsArray(attackersOperatorsArray, attackerIndexes, self.attackerOperators, operator)
+        self.getFullOperatorsArray(defendersOperatorsArray, defenderIndexes, self.defenderOperators, operator)
+
+        self.printRecruits(attackersOperatorsArray, position1, operator)
+        self.printBirthPlace(birthAttackerPlacesArray)
+        self.printRecruits(defendersOperatorsArray, position2, operator)
+        self.printBirthPlace(birthDefenderPlacesArray)
+
+        blueTeamPlayerNames = " - ".join(i for i in self.blueTeamPlayerNames)
+        orangeTeamPlayerNames = " - ".join(i for i in self.orangeTeamPlayerNames)
+        while True:
+            print("\n*--**--* Resultados de la ronda\n1- Equipo Azul: {}\n2- Equipo naranja: {}".format(blueTeamPlayerNames, orangeTeamPlayerNames))
+            option = input("Seleccione una de las siguientes opciones (1/2): ")
+            if option == "1":
+                self.roundsWonByBlueTeam += 1
+                print("\nRonda ganada por el equipo azul ({}) -- {}".format(self.roundsWonByBlueTeam, blueTeamPlayerNames))
+                break
+            elif option == "2":
+                self.roundsWonByOrangeTeam += 1
+                print("\nRonda ganada por el equipo naranja ({}) -- {}".format(self.roundsWonByOrangeTeam, orangeTeamPlayerNames))
+                break
+            else:
+                print("\nError. Seleccione el ganador de la ronda. (1/2)")
+
+    def getOperatorArrayFromTXT(self, url, type):
+        pass
+
+    def getMap(self):
+        pass
+
+    def getOperatorArrayWithEmptyValues(self, operatorNamesArray, operator):
+        pass
+
+    def generateRandomIndexes(self, recruitsArray, length, bannedAttackerPlayers, defenderBannedPlayers, isBanned):
+        pass
+
+    def getFullOperatorsArray(self, operatorsArray, recruitsIndexes, recruitsArray, operator):
+        pass
+
+    def printRecruits(self, receruitsArray, playersPosition, operator):
+        pass
+
+    def printBirthPlace(self, array):
         pass
 
     def insertPlayerNamesFromConsole(self):
