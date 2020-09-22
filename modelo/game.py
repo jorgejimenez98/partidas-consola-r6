@@ -64,6 +64,21 @@ class Game:
             self.makeOneRound()
 
     def makeOneRoundWith(self, operator):
+        """
+        REALIZAR UNA RONDA CON UN TIPO DE JUGADOR
+        :param operator: 'reclutas' o 'operadores'
+        """
+        print("\n*-**-**-* Opciones de ronda con {}:\n1- Banear {}\n2- Jugar con todos los {} disponibles".format(operator, operator, operator))
+        option = input("Selecciones una opcion para empezar (1/2): ")
+        if option == "1":
+            self.continueMakeOneRoundWithKindOfPlayer(True, operator)
+        elif option == "2":
+            self.continueMakeOneRoundWithKindOfPlayer(False, operator)
+        else:
+            print("\nError. Solo debe seleccionar (1) 0 (2)")
+            self.makeOneRoundWith(operator)
+
+    def continueMakeOneRoundWithKindOfPlayer(self, isBanned, operator):
         pass
 
     def insertPlayerNamesFromConsole(self):
